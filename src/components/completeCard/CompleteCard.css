@@ -1,0 +1,83 @@
+.complete-card {
+  margin: 10px 0;
+  background-color: #A7D1D4;
+  margin-right: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 340px;
+  border-radius: 5px;
+}
+
+.complete-card .side-div {
+  width: 10px;
+  border-radius: 5px 0 0 5px;
+  background-color: red;
+}
+
+.complete-card .card-info {
+  width: 100%;
+  padding: 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.complete-card .card-info .pending-info-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.complete-card .card-info .pending-info-header #todo-name {
+  font-size: 19px;
+  font-weight: 500;
+  text-transform: capitalize;
+}
+
+.complete-card .card-info .pending-info-header .todo-date {
+  color: gray;
+}
+
+.complete-card .card-info #todo-desc {
+  font-size: 17px;
+  color: gray;
+}
+
+.complete-card .card-info #todo-prio {
+  color: #414141;
+}
+
+.complete-card .card-info #todo-prio #pndg-spn {
+  font-weight: 500;
+}
+
+.complete-card .card-info .pending-info-foote {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.complete-card .card-info .pending-info-foote .pndg-foot-icon {
+  font-size: 18px;
+}
+
+.complete-card .card-info .pending-info-foote .pndg-foot-icon #pndg-ico {
+  margin: 0 5px;
+}
+
+.complete-card .card-info .pending-info-foote .pndg-foot-icon #pndg-ico:hover {
+  cursor: pointer;
+}
+/*# sourceMappingURL=CompleteCard.css.map */

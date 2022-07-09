@@ -1,0 +1,62 @@
+.complete-card{
+    margin: 10px 0;
+    background-color: #A7D1D4;
+    margin-right: 10px;
+    display: flex;
+    width: 340px;
+    border-radius: 5px;
+    .side-div{
+        width: 10px;
+        border-radius: 5px 0 0 5px;
+        background-color: red;
+    }
+    .card-info{
+            width: 100%;
+            padding: 15px;
+            box-sizing: border-box;
+            .pending-info-header{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                #todo-name{
+                    font-size: 19px;
+                    font-weight: 500;
+                    text-transform: capitalize;
+                }
+                .todo-date{
+                    color: gray;
+                }
+            }
+            #todo-desc{
+                font-size: 17px;
+                color: gray;
+            }
+            #todo-prio{
+                color: rgb(65, 65, 65);
+                #pndg-spn{
+                    font-weight: 500;
+                }
+            }
+            #todo-assi{
+
+            }
+            .pending-info-foote{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                #todo-dura{
+    
+                }
+                .pndg-foot-icon{
+                    font-size: 18px;
+                    #pndg-ico{
+                        margin: 0 5px;
+                        &:hover{
+                            cursor: pointer;
+                        }
+                    }
+                }
+
+            }
+    }
+}

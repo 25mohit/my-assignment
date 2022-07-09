@@ -1,0 +1,69 @@
+.todo-modal {
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
+.todo-modal .todo-container {
+  width: 50%;
+  height: 60%;
+  border-radius: 20px;
+  background-color: white;
+  padding: 10px 25px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.todo-modal .todo-container .modal-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.todo-modal .todo-container .modal-header .modal-header {
+  color: #373636;
+}
+
+.todo-modal .todo-container .modal-header .modal-close-bt {
+  border: none;
+  font-size: 25px;
+  background-color: white;
+}
+
+.todo-modal .todo-container .modal-header .modal-close-bt:hover {
+  cursor: pointer;
+}
+
+.todo-modal .todo-container .todo-frm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: left;
+}
+
+.todo-modal .todo-container .todo-frm .submit-modal {
+  padding: 10px;
+}
+/*# sourceMappingURL=TodoModal.css.map */

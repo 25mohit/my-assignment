@@ -1,0 +1,25 @@
+.pending-task{
+    // background-color: white;
+    width: 50%;
+    height: 90vh;
+    overflow: auto;
+    padding: 20px;
+    box-sizing: border-box;
+    text-align: left;
+    .pending-task-container{
+        .pending-head{
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+        }
+        #trash-emp{
+            &:hover{
+                cursor: pointer;
+            }
+        }
+        .pending-map{
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+}
