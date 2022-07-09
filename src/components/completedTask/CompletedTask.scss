@@ -1,22 +1,42 @@
+.completed-task::-webkit-scrollbar {
+    width: 10px;
+  }
+   
+  .completed-task::-webkit-scrollbar-thumb {
+    background: red; 
+    border-radius: 10px;
+  }
+  
+  .completed-task::-webkit-scrollbar-thumb:hover {
+    background: #b30000; 
+  }
 .completed-task{
     width: 50%;
-    height: 90vh;
+    height: 80vh;
     overflow: auto;
     padding: 20px;
     box-sizing: border-box;
     text-align: left;
-    .pending-task-container{
-        .pending-head{
+    .completed-task-container{
+        .completed-head{
             align-items: center;
             display: flex;
             justify-content: space-between;
+            .completed-heading{
+                font-weight: 500;
+                color: rgb(38, 133, 0);
+                letter-spacing: 3px;
+                span{
+                    font-weight: bold;
+                }
+            }
         }
         #trash-emp{
             &:hover{
                 cursor: pointer;
             }
         }
-        .pending-map{
+        .completed-map{
             display: flex;
             flex-wrap: wrap;
         }

@@ -1,11 +1,10 @@
 import './CompletedTask.css'
 import { useDispatch, useSelector } from 'react-redux/es/exports'
-import { PendingCard } from '../pendingCard/PendingCard';
 import { FaTrashAlt } from 'react-icons/fa'
 import { CompleteCard } from '../completeCard/ComplateCard';
 
 export const CompletedTask = () => {
-    const complated = useSelector(state => state.completedTodo)
+    const completed = useSelector(state => state.completedTodo)
     // console.log(complated);
 
     const dispatch = useDispatch()
@@ -18,15 +17,16 @@ export const CompletedTask = () => {
 
     return(
         <div className="completed-task">
-            <div className="pending-task-container">
-                <div className="pending-head">
-                    <h1 className="pending-heading">Completed Tasks</h1>
+            {completed.length>0 ?
+            <div className="completed-task-container">
+                <div className="completed-head">
+                    <h1 className="completed-heading">Completed Tasks<span>({completed.length})</span></h1>
                     <FaTrashAlt onClick={emptyCompleteTodo} id='trash-emp'/>
                 </div>
-                    <div className="pending-map">
-                        { complated && complated.map(todo=><CompleteCard key={todo.id} todo={ todo }/>)}
+                    <div className="completed-map">
+                        { completed && completed.map(todo=><CompleteCard key={todo.id} todo={ todo }/>)}
                     </div>
-            </div>
+            </div>: <p></p>}
         </div>
     )
 }

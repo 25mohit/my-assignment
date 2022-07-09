@@ -5,10 +5,20 @@
     display: flex;
     width: 340px;
     border-radius: 5px;
-    .side-div{
+    .high{
         width: 10px;
         border-radius: 5px 0 0 5px;
         background-color: red;
+    }
+    .low{
+        width: 10px;
+        border-radius: 5px 0 0 5px;
+        background-color: rgb(0, 94, 255);
+    }
+    .medium{
+        width: 10px;
+        border-radius: 5px 0 0 5px;
+        background-color: rgb(242, 255, 0);
     }
     .card-info{
             width: 100%;

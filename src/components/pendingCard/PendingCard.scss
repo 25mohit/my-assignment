@@ -1,14 +1,27 @@
 .pending-card{
     margin: 10px 0;
-    background-color: #A7D1D4;
+    background-color: #c8eef0;
     margin-right: 10px;
     display: flex;
-    width: 340px;
+    min-width: 340px;
     border-radius: 5px;
-    .side-div{
+    .high{
         width: 10px;
         border-radius: 5px 0 0 5px;
         background-color: red;
+        .card-info{
+            background-color: red;
+        }
+    }
+    .low{
+        width: 10px;
+        border-radius: 5px 0 0 5px;
+        background-color: rgb(0, 94, 255);
+    }
+    .medium{
+        width: 10px;
+        border-radius: 5px 0 0 5px;
+        background-color: rgb(242, 255, 0);
     }
     .card-info{
             width: 100%;
@@ -33,12 +46,13 @@
             }
             #todo-prio{
                 color: rgb(65, 65, 65);
+                margin: 10px 0;
                 #pndg-spn{
                     font-weight: 500;
                 }
             }
             #todo-assi{
-
+                
             }
             .pending-info-foote{
                 display: flex;
@@ -53,10 +67,21 @@
                         margin: 0 5px;
                         &:hover{
                             cursor: pointer;
+                            color: red;
+                            transition: 0.6s;
+                        }
+                    }
+                    #pndg-ico-c{
+                        margin: 0 5px;
+                        &:hover{
+                            color: green;
+                            transition: 0.6s;
+                            cursor: pointer;
                         }
                     }
                 }
 
             }
     }
+
 }

@@ -17,11 +17,55 @@
 }
 
 .delete-todo .delete-todo-container {
-  width: 350px;
+  min-width: 350px;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   background-color: white;
-  border-radius: 20px;
+  border-radius: 10px;
+}
+
+.delete-todo .delete-todo-container .delete-head {
+  font-size: 24px;
+}
+
+.delete-todo .delete-todo-container .dt-crd-dv {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+  margin-top: 20px;
+}
+
+.delete-todo .delete-todo-container .dt-crd-dv button {
+  padding: 5px 15px;
+  margin: 0 10px;
+  border-radius: 5px;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.delete-todo .delete-todo-container .dt-crd-dv button:hover {
+  cursor: pointer;
+}
+
+.delete-todo .delete-todo-container .dt-crd-dv #dt-dv-bt {
+  background-color: #00c800;
+  color: white;
+  border: 2px solid #00c800;
+}
+
+.delete-todo .delete-todo-container .dt-crd-dv #dt-dv-bt-y {
+  background-color: red;
+  color: white;
+  border: 2px solid red;
 }
 /*# sourceMappingURL=DeleteTodo.css.map */

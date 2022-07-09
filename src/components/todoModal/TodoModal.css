@@ -13,12 +13,15 @@
   height: 100vh;
   top: 0;
   left: 0;
+  z-index: 1000;
   background-color: rgba(0, 0, 0, 0.3);
 }
 
 .todo-modal .todo-container {
-  width: 50%;
-  height: 60%;
+  width: 35%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
   border-radius: 20px;
   background-color: white;
   padding: 10px 25px;
@@ -36,14 +39,26 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  position: relative;
 }
 
 .todo-modal .todo-container .modal-header .modal-header {
   color: #373636;
+  font-weight: 400;
+  letter-spacing: 4px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .todo-modal .todo-container .modal-header .modal-close-bt {
+  position: absolute;
+  top: -30px;
+  right: -40px;
   border: none;
+  padding: 10px;
+  border-radius: 50%;
   font-size: 25px;
   background-color: white;
 }
@@ -61,9 +76,56 @@
       -ms-flex-direction: column;
           flex-direction: column;
   text-align: left;
+  padding: 0 40px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.todo-modal .todo-container .todo-frm label {
+  font-size: 17px;
+  margin: 10px 0;
+  margin-top: 15px;
+}
+
+.todo-modal .todo-container .todo-frm input[type=text], .todo-modal .todo-container .todo-frm input[type=date], .todo-modal .todo-container .todo-frm select {
+  padding: 7px;
+  border: 1px solid #969696;
+  border-radius: 5px;
+}
+
+.todo-modal .todo-container .todo-frm input[type=text]::-webkit-input-placeholder, .todo-modal .todo-container .todo-frm input[type=date]::-webkit-input-placeholder, .todo-modal .todo-container .todo-frm select::-webkit-input-placeholder {
+  padding-left: 10px;
+}
+
+.todo-modal .todo-container .todo-frm input[type=text]:-ms-input-placeholder, .todo-modal .todo-container .todo-frm input[type=date]:-ms-input-placeholder, .todo-modal .todo-container .todo-frm select:-ms-input-placeholder {
+  padding-left: 10px;
+}
+
+.todo-modal .todo-container .todo-frm input[type=text]::-ms-input-placeholder, .todo-modal .todo-container .todo-frm input[type=date]::-ms-input-placeholder, .todo-modal .todo-container .todo-frm select::-ms-input-placeholder {
+  padding-left: 10px;
+}
+
+.todo-modal .todo-container .todo-frm input[type=text]::placeholder, .todo-modal .todo-container .todo-frm input[type=date]::placeholder, .todo-modal .todo-container .todo-frm select::placeholder {
+  padding-left: 10px;
 }
 
 .todo-modal .todo-container .todo-frm .submit-modal {
   padding: 10px;
+  margin: 20px 0;
+  background-color: #ED987E;
+  border: 2px solid #ED987E;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.todo-modal .todo-container .todo-frm .submit-modal:hover {
+  cursor: pointer;
+  border: 2px solid #ED987E;
+  color: #ED987E;
+  background-color: white;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 /*# sourceMappingURL=TodoModal.css.map */

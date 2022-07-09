@@ -1,6 +1,19 @@
+.pending-task::-webkit-scrollbar {
+  width: 10px;
+}
+
+.pending-task::-webkit-scrollbar-thumb {
+  background: red;
+  border-radius: 10px;
+}
+
+.pending-task::-webkit-scrollbar-thumb:hover {
+  background: #b30000;
+}
+
 .pending-task {
   width: 50%;
-  height: 90vh;
+  height: 80vh;
   overflow: auto;
   padding: 20px;
   -webkit-box-sizing: border-box;
@@ -20,6 +33,16 @@
           justify-content: space-between;
 }
 
+.pending-task .pending-task-container .pending-head .pending-heading {
+  font-weight: 500;
+  color: #f63737;
+  letter-spacing: 3px;
+}
+
+.pending-task .pending-task-container .pending-head .pending-heading span {
+  font-weight: bold;
+}
+
 .pending-task .pending-task-container #trash-emp:hover {
   cursor: pointer;
 }
@@ -30,5 +53,19 @@
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+
+.pending-task #empty-pending-task {
+  position: fixed;
+  top: 35%;
+  color: #00A0FE;
+  letter-spacing: 4px;
+  font-size: 35px;
+  text-align: left;
+  font-weight: bold;
+}
+
+.pending-task #empty-pending-task span {
+  font-size: 55px;
 }
 /*# sourceMappingURL=PendingTask.css.map */

@@ -9,10 +9,22 @@
   border-radius: 5px;
 }
 
-.complete-card .side-div {
+.complete-card .high {
   width: 10px;
   border-radius: 5px 0 0 5px;
   background-color: red;
+}
+
+.complete-card .low {
+  width: 10px;
+  border-radius: 5px 0 0 5px;
+  background-color: #005eff;
+}
+
+.complete-card .medium {
+  width: 10px;
+  border-radius: 5px 0 0 5px;
+  background-color: #f2ff00;
 }
 
 .complete-card .card-info {

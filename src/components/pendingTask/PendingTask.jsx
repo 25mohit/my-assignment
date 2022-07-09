@@ -15,9 +15,10 @@ export const PendingTask = () => {
     }
     return(
         <div className="pending-task">
+            {todos.length>0 ?
             <div className="pending-task-container">
                 <div className="pending-head">
-                    <h1 className="pending-heading">Pending Tasks</h1>
+                    <h1 className="pending-heading">Pending Tasks <span>({todos.length})</span></h1>
                     <FaTrashAlt onClick={emptyPendingTodo} id='trash-emp'/>
                 </div>
                     <div className="pending-map">
@@ -25,7 +26,7 @@ export const PendingTask = () => {
                             todos.map(todo => <PendingCard key={ todo.id } todo={ todo }/>)
                         }
                     </div>
-            </div>
+            </div>:<p id='empty-pending-task'>To-Do list is Empty <br/>start adding new <br/><span>To-Do's</span></p>}
         </div>
     )
 }

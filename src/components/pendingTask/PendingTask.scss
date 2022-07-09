@@ -1,7 +1,18 @@
+.pending-task::-webkit-scrollbar {
+    width: 10px;
+  }
+   
+  .pending-task::-webkit-scrollbar-thumb {
+    background: red; 
+    border-radius: 10px;
+  }
+  
+  .pending-task::-webkit-scrollbar-thumb:hover {
+    background: #b30000; 
+  }
 .pending-task{
-    // background-color: white;
     width: 50%;
-    height: 90vh;
+    height: 80vh;
     overflow: auto;
     padding: 20px;
     box-sizing: border-box;
@@ -11,6 +22,14 @@
             align-items: center;
             display: flex;
             justify-content: space-between;
+            .pending-heading{
+                font-weight: 500;
+                color: rgb(246, 55, 55);
+                letter-spacing: 3px;
+                span{
+                    font-weight: bold;
+                }
+            }
         }
         #trash-emp{
             &:hover{
@@ -20,6 +39,18 @@
         .pending-map{
             display: flex;
             flex-wrap: wrap;
+        }
+    }
+    #empty-pending-task{
+        position: fixed;
+        top: 35%;
+        color: #00A0FE;
+        letter-spacing: 4px;
+        font-size: 35px;
+        text-align: left;
+        font-weight: bold;
+        span{
+            font-size: 55px;
         }
     }
 }
