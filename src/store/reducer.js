@@ -3,28 +3,10 @@ import { createStore } from "redux"
 const initialState = {
     todos:[],
     completedTodo:[],
-    filteredTodo:[],
-    appliedFilters:{}
 }
-    const getFilteredTodo = (todos, filters) => {
-        let filteredTodo = todos
-        for(const[filterName, value ] of Object.entries(filters)) {
-            if(filterName == "high"){
-                filteredTodo = filteredTodo.filter( todo => {
-                    if(todo.taskPriority.toLowerCase().includes(value.toLowerCase())){
-                        return todo
-                    }
-                })
-            }
-        }
-        return filteredTodo
-    }
-
-
 
 
 const reducer = (state= initialState , action) => {
-    let newState = Object.assign({}, state);
     switch(action.type){
         case "ADD_TOTO":
             return{
@@ -66,16 +48,6 @@ const reducer = (state= initialState , action) => {
                 ...state,
                 completedTodo:[...state.completedTodo, action.payload]
             }
-        case "FILTER_BY_PRIORITIE":
-            let sPriotrie = action.payload.taskPriority;
-            if(sPriotrie){
-                state.appliedFilters.high = sPriotrie
-            }else{
-                delete state.appliedFilters.high
-            }
-            newState.filteredTodo = getFilteredTodo(state.todos, state.appliedFilters)
-            return newState;
-
         default:
             return state;
     }
