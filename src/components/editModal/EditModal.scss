@@ -7,11 +7,155 @@
     height: 100vh;
     top: 0;
     left: 0;
-    background-color: rgba(0,0,0,0.6);
-    .container-edit-modal{
-        width: 50%;
-        height: 50%;
-        background-color: white;
-        border-radius: 15px;
+    z-index: 1000;
+    background-color: rgba(0,0,0,0.3);
+        .container-edit-modal{
+            width: 35%;
+            height: fit-content;
+            border-radius: 20px;
+            background-color: white;
+            padding: 10px 25px;
+            box-sizing: border-box;
+            .edit-header{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: relative;
+                .edit-header-text{
+                    color: rgb(55, 54, 54);
+                    font-weight: 400;
+                    letter-spacing: 4px;
+                    user-select: none;
+                }
+                .modal-close-bt{
+                    position: absolute;
+                    top: -30px;
+                    right: -40px;
+                    border: none;
+                    padding: 10px;
+                    border-radius: 50%;
+                    font-size: 25px;
+                    background-color: white;
+                    &:hover{
+                        cursor: pointer;
+                    }
+                }
+            }
+            .edit-modal-frm{
+                display: flex;
+                flex-direction: column;
+                text-align: left;
+                padding: 0 40px ;
+                // margin: 10px 0;
+                box-sizing: border-box;
+                .err-nm, .err-ds, .err-as, .err-du, .err-pri, .err-dt{
+                    color: red;
+                    margin-top: 5px;
+                    display: none;
+                    font-style: italic;
+                    font-weight: 500;
+                }
+                .flex-div{
+                    // margin: 10px 0;
+                    margin-top: 25px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    .just-dv{
+                        justify-content: left;
+                        width: 50%;
+                    }
+                }
+                label{
+                    font-size: 17px;
+                    margin: 10px 0;
+                    margin-right: 10px;
+                    margin-top: 15px;
+                }
+                #inpt-nm,#inpt-dt,#inpt-ds,#inpt-as,#inpt-du,#inpt-pr{
+                    padding: 7px;
+                    border: 1px solid rgb(150, 150, 150);
+                    border-radius: 5px;
+                    &::placeholder{
+                        padding-left: 10px;
+                    }
+                }
+                .submit-modal{
+                    padding: 10px;
+                    margin: 20px 0;
+                    background-color: #ED987E;
+                    border: 2px solid #ED987E;
+                    border-radius: 10px;
+                    color: white;
+                    font-weight: bold;
+                    font-size: 18px;
+                    &:hover{
+                        cursor: pointer;
+                        border: 2px solid #ED987E;
+                        color: #ED987E;
+                        background-color: white;
+                        transition: 0.5s;
+                    }
+                }
+            }
+        }
+}
+
+#inpt-nm:invalid[focused="true"] ~ .err-nm{
+    display: block;
+}
+#inpt-dt:invalid[focused="true"] ~ .err-dt{
+    display: block;
+}
+#inpt-pr:invalid[focused="true"] ~ .err-pri{
+    display: block;
+}
+#inpt-ds:invalid[focused="true"] ~ .err-ds{
+    display: block;
+}
+#inpt-as:invalid[focused="true"] ~ .err-as{
+    display: block;
+}
+#inpt-du:invalid[focused="true"] ~ .err-du{
+    display: block;
+}
+@media screen and(max-width:1230px) {
+        .edit-modal{
+            .container-edit-modal{
+                width: 45%;
+            }
+        }
+}
+@media screen and(max-width:1008px) {
+    .edit-modal{
+        .container-edit-modal{
+            width: 55%;
+            padding: 10px 5px;
+        }
+    }
+}
+@media screen and(max-width:820px) {
+    .edit-modal{
+        .container-edit-modal{
+            width: 65%;
+            .todo-frm{
+                padding: 0 5px;
+            }
+        }
+    }
+}
+@media screen and(max-width:527px) {
+    .edit-modal{
+        .container-edit-modal{
+            width: 95%;
+            .edit-header{
+                .modal-close-bt{
+                    right: -5px;
+                }
+            }
+            .todo-frm{
+                padding: 0 5px;
+            }
+        }
     }
 }

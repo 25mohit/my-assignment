@@ -2,9 +2,11 @@ import './PendingTask.css'
 import { useSelector, useDispatch } from 'react-redux'
 import { PendingCard } from '../pendingCard/PendingCard'
 import { FaTrashAlt } from 'react-icons/fa'
+import { useState } from 'react'
 
 export const PendingTask = () => {
     const todos = useSelector(state => state.todos)
+    const [prioritieFilter, setPrioritieFilter] = useState('')
 
     const dispatch = useDispatch()
 
@@ -13,6 +15,7 @@ export const PendingTask = () => {
             type:"EMPTY_PENDING_TODO"
         })
     }
+
     return(
         <div className="pending-task">
             {todos.length>0 ?

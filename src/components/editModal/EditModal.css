@@ -13,13 +13,205 @@
   height: 100vh;
   top: 0;
   left: 0;
-  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 .edit-modal .container-edit-modal {
-  width: 50%;
-  height: 50%;
+  width: 35%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  border-radius: 20px;
   background-color: white;
-  border-radius: 15px;
+  padding: 10px 25px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.edit-modal .container-edit-modal .edit-header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+}
+
+.edit-modal .container-edit-modal .edit-header .edit-header-text {
+  color: #373636;
+  font-weight: 400;
+  letter-spacing: 4px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.edit-modal .container-edit-modal .edit-header .modal-close-bt {
+  position: absolute;
+  top: -30px;
+  right: -40px;
+  border: none;
+  padding: 10px;
+  border-radius: 50%;
+  font-size: 25px;
+  background-color: white;
+}
+
+.edit-modal .container-edit-modal .edit-header .modal-close-bt:hover {
+  cursor: pointer;
+}
+
+.edit-modal .container-edit-modal .edit-modal-frm {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: left;
+  padding: 0 40px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.edit-modal .container-edit-modal .edit-modal-frm .err-nm, .edit-modal .container-edit-modal .edit-modal-frm .err-ds, .edit-modal .container-edit-modal .edit-modal-frm .err-as, .edit-modal .container-edit-modal .edit-modal-frm .err-du, .edit-modal .container-edit-modal .edit-modal-frm .err-pri, .edit-modal .container-edit-modal .edit-modal-frm .err-dt {
+  color: red;
+  margin-top: 5px;
+  display: none;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.edit-modal .container-edit-modal .edit-modal-frm .flex-div {
+  margin-top: 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.edit-modal .container-edit-modal .edit-modal-frm .flex-div .just-dv {
+  -webkit-box-pack: left;
+      -ms-flex-pack: left;
+          justify-content: left;
+  width: 50%;
+}
+
+.edit-modal .container-edit-modal .edit-modal-frm label {
+  font-size: 17px;
+  margin: 10px 0;
+  margin-right: 10px;
+  margin-top: 15px;
+}
+
+.edit-modal .container-edit-modal .edit-modal-frm #inpt-nm, .edit-modal .container-edit-modal .edit-modal-frm #inpt-dt, .edit-modal .container-edit-modal .edit-modal-frm #inpt-ds, .edit-modal .container-edit-modal .edit-modal-frm #inpt-as, .edit-modal .container-edit-modal .edit-modal-frm #inpt-du, .edit-modal .container-edit-modal .edit-modal-frm #inpt-pr {
+  padding: 7px;
+  border: 1px solid #969696;
+  border-radius: 5px;
+}
+
+.edit-modal .container-edit-modal .edit-modal-frm #inpt-nm::-webkit-input-placeholder, .edit-modal .container-edit-modal .edit-modal-frm #inpt-dt::-webkit-input-placeholder, .edit-modal .container-edit-modal .edit-modal-frm #inpt-ds::-webkit-input-placeholder, .edit-modal .container-edit-modal .edit-modal-frm #inpt-as::-webkit-input-placeholder, .edit-modal .container-edit-modal .edit-modal-frm #inpt-du::-webkit-input-placeholder, .edit-modal .container-edit-modal .edit-modal-frm #inpt-pr::-webkit-input-placeholder {
+  padding-left: 10px;
+}
+
+.edit-modal .container-edit-modal .edit-modal-frm #inpt-nm:-ms-input-placeholder, .edit-modal .container-edit-modal .edit-modal-frm #inpt-dt:-ms-input-placeholder, .edit-modal .container-edit-modal .edit-modal-frm #inpt-ds:-ms-input-placeholder, .edit-modal .container-edit-modal .edit-modal-frm #inpt-as:-ms-input-placeholder, .edit-modal .container-edit-modal .edit-modal-frm #inpt-du:-ms-input-placeholder, .edit-modal .container-edit-modal .edit-modal-frm #inpt-pr:-ms-input-placeholder {
+  padding-left: 10px;
+}
+
+.edit-modal .container-edit-modal .edit-modal-frm #inpt-nm::-ms-input-placeholder, .edit-modal .container-edit-modal .edit-modal-frm #inpt-dt::-ms-input-placeholder, .edit-modal .container-edit-modal .edit-modal-frm #inpt-ds::-ms-input-placeholder, .edit-modal .container-edit-modal .edit-modal-frm #inpt-as::-ms-input-placeholder, .edit-modal .container-edit-modal .edit-modal-frm #inpt-du::-ms-input-placeholder, .edit-modal .container-edit-modal .edit-modal-frm #inpt-pr::-ms-input-placeholder {
+  padding-left: 10px;
+}
+
+.edit-modal .container-edit-modal .edit-modal-frm #inpt-nm::placeholder, .edit-modal .container-edit-modal .edit-modal-frm #inpt-dt::placeholder, .edit-modal .container-edit-modal .edit-modal-frm #inpt-ds::placeholder, .edit-modal .container-edit-modal .edit-modal-frm #inpt-as::placeholder, .edit-modal .container-edit-modal .edit-modal-frm #inpt-du::placeholder, .edit-modal .container-edit-modal .edit-modal-frm #inpt-pr::placeholder {
+  padding-left: 10px;
+}
+
+.edit-modal .container-edit-modal .edit-modal-frm .submit-modal {
+  padding: 10px;
+  margin: 20px 0;
+  background-color: #ED987E;
+  border: 2px solid #ED987E;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.edit-modal .container-edit-modal .edit-modal-frm .submit-modal:hover {
+  cursor: pointer;
+  border: 2px solid #ED987E;
+  color: #ED987E;
+  background-color: white;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+#inpt-nm:invalid[focused="true"] ~ .err-nm {
+  display: block;
+}
+
+#inpt-dt:invalid[focused="true"] ~ .err-dt {
+  display: block;
+}
+
+#inpt-pr:invalid[focused="true"] ~ .err-pri {
+  display: block;
+}
+
+#inpt-ds:invalid[focused="true"] ~ .err-ds {
+  display: block;
+}
+
+#inpt-as:invalid[focused="true"] ~ .err-as {
+  display: block;
+}
+
+#inpt-du:invalid[focused="true"] ~ .err-du {
+  display: block;
+}
+
+@media screen and (max-width: 1230px) {
+  .edit-modal .container-edit-modal {
+    width: 45%;
+  }
+}
+
+@media screen and (max-width: 1008px) {
+  .edit-modal .container-edit-modal {
+    width: 55%;
+    padding: 10px 5px;
+  }
+}
+
+@media screen and (max-width: 820px) {
+  .edit-modal .container-edit-modal {
+    width: 65%;
+  }
+  .edit-modal .container-edit-modal .todo-frm {
+    padding: 0 5px;
+  }
+}
+
+@media screen and (max-width: 527px) {
+  .edit-modal .container-edit-modal {
+    width: 95%;
+  }
+  .edit-modal .container-edit-modal .edit-header .modal-close-bt {
+    right: -5px;
+  }
+  .edit-modal .container-edit-modal .todo-frm {
+    padding: 0 5px;
+  }
 }
 /*# sourceMappingURL=EditModal.css.map */

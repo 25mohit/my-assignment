@@ -1,5 +1,23 @@
 .home{
     margin-top: 30px;
     display: flex;
+    width: 100%;
     flex-wrap: wrap;
+    .p-tsk-div{
+        width: 50%;
+    }   
+    .p-cmp-ts{
+        width: 50%;
+    }
+}
+@media screen  and(max-width:750px){
+    .home{
+        .p-cmp-ts{
+            min-width: 100%;
+        }
+        .p-tsk-div{
+            min-width: 100%;
+            height: 70vh;
+        }
+    }
 }

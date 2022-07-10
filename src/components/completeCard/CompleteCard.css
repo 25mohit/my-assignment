@@ -1,6 +1,6 @@
 .complete-card {
   margin: 10px 0;
-  background-color: #A7D1D4;
+  background-color: #c1e0e3;
   margin-right: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -63,6 +63,7 @@
 
 .complete-card .card-info #todo-prio {
   color: #414141;
+  margin: 10px 0;
 }
 
 .complete-card .card-info #todo-prio #pndg-spn {

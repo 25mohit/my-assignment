@@ -1,6 +1,6 @@
 .complete-card{
     margin: 10px 0;
-    background-color: #A7D1D4;
+    background-color: #c1e0e3;
     margin-right: 10px;
     display: flex;
     width: 340px;
@@ -43,20 +43,15 @@
             }
             #todo-prio{
                 color: rgb(65, 65, 65);
+                margin: 10px 0;
                 #pndg-spn{
                     font-weight: 500;
                 }
-            }
-            #todo-assi{
-
             }
             .pending-info-foote{
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
-                #todo-dura{
-    
-                }
                 .pndg-foot-icon{
                     font-size: 18px;
                     #pndg-ico{

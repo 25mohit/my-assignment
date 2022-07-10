@@ -19,9 +19,9 @@
             .modal-header{
                 display: flex;
                 align-items: center;
-                justify-content: space-between;
+                justify-content: center;
                 position: relative;
-                .modal-header{
+                .modal-header-text{
                     color: rgb(55, 54, 54);
                     font-weight: 400;
                     letter-spacing: 4px;
@@ -48,12 +48,31 @@
                 padding: 0 40px ;
                 // margin: 10px 0;
                 box-sizing: border-box;
+                .err-nm, .err-ds, .err-as, .err-du, .err-pri, .err-dt{
+                    color: red;
+                    margin-top: 5px;
+                    display: none;
+                    font-style: italic;
+                    font-weight: 500;
+                }
+                .flex-div{
+                    // margin: 10px 0;
+                    margin-top: 25px;
+                    display: flex;
+                    flex-wrap: wrap;
+                    justify-content: space-between;
+                    .just-dv{
+                        justify-content: left;
+                        width: 50%;
+                    }
+                }
                 label{
                     font-size: 17px;
                     margin: 10px 0;
+                    margin-right: 10px;
                     margin-top: 15px;
                 }
-                input[type=text],input[type=date],select{
+                #inpt-nm,#inpt-dt,#inpt-ds,#inpt-as,#inpt-du,#inpt-pr{
                     padding: 7px;
                     border: 1px solid rgb(150, 150, 150);
                     border-radius: 5px;
@@ -80,4 +99,63 @@
                 }
             }
         }
+}
+
+#inpt-nm:invalid[focused="true"] ~ .err-nm{
+    display: block;
+}
+#inpt-dt:invalid[focused="true"] ~ .err-dt{
+    display: block;
+}
+#inpt-pr:invalid[focused="true"] ~ .err-pri{
+    display: block;
+}
+#inpt-ds:invalid[focused="true"] ~ .err-ds{
+    display: block;
+}
+#inpt-as:invalid[focused="true"] ~ .err-as{
+    display: block;
+}
+#inpt-du:invalid[focused="true"] ~ .err-du{
+    display: block;
+}
+@media screen and(max-width:1230px) {
+        .todo-modal{
+            .todo-container{
+                width: 45%;
+            }
+        }
+}
+@media screen and(max-width:1008px) {
+    .todo-modal{
+        .todo-container{
+            width: 55%;
+            padding: 10px 5px;
+        }
+    }
+}
+@media screen and(max-width:820px) {
+    .todo-modal{
+        .todo-container{
+            width: 65%;
+            .todo-frm{
+                padding: 0 15px;
+            }
+        }
+    }
+}
+@media screen and(max-width:527px) {
+    .todo-modal{
+        .todo-container{
+            width: 95%;
+            .modal-header{
+                .modal-close-bt{
+                    right: -5px;
+                }
+            }
+            .todo-frm{
+                padding: 0 10px;
+            }
+        }
+    }
 }

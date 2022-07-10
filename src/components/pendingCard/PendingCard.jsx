@@ -19,7 +19,6 @@ export const PendingCard = ({ todo }) => {
     const deleteTask = ( id ) => {
         setShowDelete(true)
         setTaskId(id)
-        console.log(id);
     }
     const completeTodo = () => {
         dispatch({
