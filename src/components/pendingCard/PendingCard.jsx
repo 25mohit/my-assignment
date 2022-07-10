@@ -3,9 +3,11 @@ import { BsTrash } from 'react-icons/bs'
 import { GiCheckMark } from 'react-icons/gi'
 import { FaRegEdit } from 'react-icons/fa'
 import { DeleteTodo } from '../deleteTodo/DeleteTodo'
+import { BsPrinter } from 'react-icons/bs'
 import { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux/es/exports'
 import { EditModal } from '../editModal/EditModal'
+import { jsPDF } from "jspdf";
 
 export const PendingCard = ({ todo }) => {
     const [showDelete, setShowDelete] = useState(false)
@@ -47,7 +49,25 @@ export const PendingCard = ({ todo }) => {
             setChangeColor('medium')
         }
     },[showEdit])
-    
+    const todoHeading = `Pairroxz To-Do's.      Your UID : ${todo.id}`
+    const taskName = `Task Name : ${todo.taskName}`;
+    const taskDate =   `Date Added : ${todo.taskDate}`
+    const taskDesc = `Task Description : ${todo.taskDescription }`;
+    const taskAssi = `Task Assigned to : ${todo.taskAssigned}`;
+    const taskPrio = `Task Priority : ${todo.taskPriority }`;
+    const taskComp = `Task Complete in ${todo.taskDuration} Days..`
+
+    const printPdf = () => {
+        var doc = new jsPDF('portrait', 'px' , 'a4', 'false');
+        doc.text(60,30,`${todoHeading}`)
+        doc.text(60,60,`${taskName}`)
+        doc.text(270,60,`${taskDate}`)
+        doc.text(60,80,`${taskDesc}`)
+        doc.text(60,100,`${taskAssi}`)
+        doc.text(60,120,`${taskPrio}`)
+        doc.text(60,140,`${taskComp}`)
+        doc.save('To-Do Card.pdf')
+    }
     return(
         <div className="pending-card">
             <div className={changeColor} />
@@ -62,6 +82,7 @@ export const PendingCard = ({ todo }) => {
                 <div className="pending-info-foote">
                     <p id='todo-dura'>Complate in { todo.taskDuration } Days</p>
                     <div className="pndg-foot-icon">
+                        <BsPrinter  id='pndg-ico' onClick={ printPdf }/>
                         <BsTrash id='pndg-ico' onClick={() =>deleteTask(todo.id)}/>
                         <FaRegEdit id='pndg-ico' onClick={() => updateTodo(
                             todo.id,

@@ -42,7 +42,11 @@
   font-weight: bold;
 }
 
-.pending-task .pending-task-container #trash-emp:hover {
+.pending-task .pending-task-container .icons #trash-emp {
+  margin: 0 10px;
+}
+
+.pending-task .pending-task-container .icons #trash-emp:hover {
   cursor: pointer;
 }
 

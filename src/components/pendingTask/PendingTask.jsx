@@ -22,7 +22,10 @@ export const PendingTask = () => {
             <div className="pending-task-container">
                 <div className="pending-head">
                     <h1 className="pending-heading">Pending Tasks <span>({todos.length})</span></h1>
-                    <FaTrashAlt onClick={emptyPendingTodo} id='trash-emp'/>
+                    <div className="icons">
+                        
+                        <FaTrashAlt onClick={emptyPendingTodo} id='trash-emp'/>
+                    </div>
                 </div>
                     <div className="pending-map">
                         {

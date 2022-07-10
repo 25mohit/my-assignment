@@ -22,18 +22,22 @@
             align-items: center;
             display: flex;
             justify-content: space-between;
-            .pending-heading{
-                font-weight: 500;
-                color: rgb(246, 55, 55);
-                letter-spacing: 3px;
-                span{
-                    font-weight: bold;
+                .pending-heading{
+                    font-weight: 500;
+                    color: rgb(246, 55, 55);
+                    letter-spacing: 3px;
+                    span{
+                        font-weight: bold;
+                    }
                 }
-            }
         }
-        #trash-emp{
-            &:hover{
-                cursor: pointer;
+        
+        .icons{
+            #trash-emp{
+                margin: 0 10px;
+                &:hover{
+                    cursor: pointer;
+                }
             }
         }
         .pending-map{
